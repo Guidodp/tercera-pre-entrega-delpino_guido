@@ -1,0 +1,27 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block cabecera %}
+MOdelo de motos {{ modelo }}
+{% endblock cabecera %}
+    
+{% block contenido %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for curso in cursos %}
+        <tr>
+            <td>{{ moto.id }}</td>
+            <td>{{ moto.marca }}</td>
+            <td>{{ moto.modelo }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock contenido %}
